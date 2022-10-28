@@ -17,7 +17,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="#">Dashboard</a></li>
                             <li><a href="#">Forms</a></li>
-                            <li class="active">Edit Role</li>
+                            <li class="active">@yield('title')</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
           <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <strong>Edit Role</strong>  {{$role->name}}
+                    <strong>@yield('title')</strong>  {{$role->name}}
                 </div>
                 <div class="card-body card-block">
                     <form action=" {{route('roles.update', $role->id)}} " method="post" class="form-horizontal">

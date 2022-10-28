@@ -17,7 +17,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="#">Dashboard</a></li>
                             <li><a href="#">Forms</a></li>
-                            <li class="active">Create Role</li>
+                            <li class="active">@yield('title')</li>
                         </ol>
                     </div>
                 </div>
