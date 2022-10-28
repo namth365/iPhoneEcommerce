@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Categories')
 @section('content')
-<div class="col-xl-8">
+<div class="col-xl-12">
     <div class="card">
         <div class="card-body">
             <h4 class="box-title">Categories </h4>
