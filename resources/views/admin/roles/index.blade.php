@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'Roles')
+@section('title', 'List Roles')
 @section('content')
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">
@@ -17,7 +17,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="#">Dashboard</a></li>
                             <li><a href="#">Table</a></li>
-                            <li class="active">List Role Table</li>
+                            <li class="active">@yield('title')</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">List Role Table</strong>
+                        <strong class="card-title">@yield('title') Table</strong>
                         @if (session('message'))
                         <strong class="text-success"> {{session('message')}} </strong>
                           @endif
@@ -73,8 +73,5 @@
             </div>
         </div>
     </div><!-- .animated -->
-    {{-- <div class="badge">
-        {{ $roles->links() }}
-    </div> --}}
 </div>
 @endsection
