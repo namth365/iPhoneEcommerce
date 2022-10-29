@@ -67,8 +67,8 @@
                                         <form action="{{route('users.destroy', $user->id)}}" method="post" id="form-delete{{ $user->id }}">
                                             @csrf
                                             @method('delete')
-                                        <button class="badge btn btn-delete btn-danger" data-id={{ $user->id }} onclick="return confirm('Delete it??');" >Delete</button>
                                         </form>
+                                        <button class="badge btn btn-delete btn-danger" data-id={{ $user->id }}  >Delete</button>
                                     </td>
                                 </tr>
                                 @endforeach

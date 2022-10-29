@@ -59,8 +59,8 @@
                                         <form action="{{route('categories.destroy', $category->id)}}" method="post" id="form-delete{{ $category->id }}">
                                             @csrf
                                             @method('delete')
-                                        <button class="badge btn btn-delete btn-danger" data-id={{ $category->id }} onclick="return confirm('Delete it??');" >Delete</button>
                                         </form>
+                                        <button class="badge btn btn-delete btn-danger" data-id={{ $category->id }}  >Delete</button>
                                     </td>
                                 </tr>
                                 @endforeach

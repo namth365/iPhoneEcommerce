@@ -62,7 +62,7 @@
                             <button type="submit" class="btn btn-success btn-sm">
                                Submit
                             </button>
-                            <a href="{{route('categories.index')}}" type="reset" class="btn btn-danger btn-sm" onclick="return confirm('Unsaved data! Back??');">
+                            <a href="{{route('categories.index')}}" type="back" class="btn btn-back btn-danger btn-sm" >
                                 Back
                             </a>
                         </div>

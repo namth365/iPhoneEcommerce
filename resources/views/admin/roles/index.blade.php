@@ -61,8 +61,8 @@
                                         <form action="{{route('roles.destroy', $role->id)}}" method="post" id="form-delete{{ $role->id }}">
                                             @csrf
                                             @method('delete')
-                                        <button class="badge btn btn-delete btn-danger" data-id={{ $role->id }} onclick="return confirm('Delete it??');" >Delete</button>
                                         </form>
+                                        <button class="badge btn btn-delete btn-danger" data-id={{ $role->id }} >Delete</button>
                                     </td>
                                 </tr>
                                 @endforeach

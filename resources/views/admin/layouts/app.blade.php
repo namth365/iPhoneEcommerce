@@ -71,6 +71,7 @@
         }
 
     </style>
+    <link href="{{asset('admin/assets/css/product/style.css')}}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -130,7 +131,12 @@
     <script src="{{asset('admin/assets/js/lib/data-table/buttons.colVis.min.js')}}"></script>
     <script src="{{asset('admin/assets/js/init/datatables-init.js')}}"></script>
     <script src="{{asset('admin/assets/users/images.js')}} " ></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="{{asset('admin/assets/confirm/confirmDelete.js')}}"></script>
+    <script src="{{asset('admin/assets/confirm/confirmBack.js')}}"></script>
+    
     <script type="text/javascript">
         $(document).ready(function() {
         $('#bootstrap-data-table-export').DataTable();
