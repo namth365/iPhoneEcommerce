@@ -14,10 +14,10 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Products</a>
+                    <a href="{{route('products.index')}}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Products</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-table"></i><a href="tables-basic.html">Add</a></li>
-                        <li><i class="fa fa-table"></i><a href="tables-data.html">List</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{route('products.create')}}">Add</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{route('products.index')}}">List</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
