@@ -34,7 +34,7 @@
                                     <td> <span class="name"> {{$coupon->name}} </span> </td>
                                     <td> <span class="name"> {{$coupon->type}} </span> </td>
                                     <td><span class="">{{$coupon->value}}</span></td>
-                                    <td><span class="">{{$coupon->expery_date}}</span></td>
+                                    <td><span class="">{{date('d-m-Y', strtotime($coupon->expery_date))}}</span></td>
                                     <td>
                                         <a href="{{route('coupons.edit', $coupon->id)}}" class="badge btn btn-info">Edit</a>
                                         <form action="{{route('coupons.destroy', $coupon->id)}}" method="post" id="form-delete{{ $coupon->id }}">

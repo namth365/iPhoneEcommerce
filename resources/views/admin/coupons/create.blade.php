@@ -59,7 +59,7 @@
                             <button type="submit" class="btn btn-info btn-sm">
                                Submit
                             </button>
-                            <a href="{{route('coupons.index')}}" type="back" class="btn btn-back btn-danger btn-sm" >
+                            <a href="{{route('coupons.index')}}" type="back" class="btn btn-danger btn-sm" onclick="return confirm('Unsaved data! Back??');" >
                                 Back
                             </a>
                         </div>

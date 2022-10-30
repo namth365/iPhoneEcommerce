@@ -138,4 +138,5 @@
             </div>
         </div>
     </div><!-- .animated -->
+</div>
 @endsection
