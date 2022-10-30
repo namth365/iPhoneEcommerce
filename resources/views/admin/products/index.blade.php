@@ -35,8 +35,8 @@
                                     <td><img src="{{ $product->images ? asset('upload/' . $product->images->url) : 'upload/default.png' }}" width="180px"></td>
                                     <td>  <span class="name"> {{$product->name}} </span> </td>
                                     <td> <span class="product">{{$product->description}}</span> </td>
-                                    <td> <span class="product">{{$product->sale}}</span> </td>
-                                    <td> <span class="product">{{$product->quantity}}</span> </td>
+                                    <td> <span class="product">{{ number_format($product->sale)}}</span> </td>
+                                    <td> <span class="product">{{ number_format($product->quantity)}}</span> </td>
                                     <td>
                                         <a href="{{route('products.edit', $product->id)}}" class="badge btn btn-info">Edit</a>
                                         <form action="{{route('products.destroy', $product->id)}}" method="post" id="form-delete{{ $product->id }}">

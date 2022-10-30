@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="col-3 ">
                                         <strong type="text" id="text-input" > Price </strong>
-                                        <input type="number" id="text-input" value="000" value="{{old('price')}}"  name="price" class="form-control">
+                                        <input type="number" id="text-input" value="{{old('price')}}"  name="price" class="form-control">
                                 </div>
                                 <div class="col-3 ">
                                     <strong type="text" id="text-input" > Color </strong>
