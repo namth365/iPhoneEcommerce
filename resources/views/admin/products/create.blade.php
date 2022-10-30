@@ -1,30 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Create Product')
+@section('form', 'Products')
 @section('content')
-<div class="breadcrumbs">
-    <div class="breadcrumbs-inner">
-        <div class="row m-0">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">@yield('title')</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="content">
     <div class="animated fadeIn">
@@ -81,11 +58,11 @@
                                         class=" form-control-label">Sizes</label></div>
                                 <div class="col-3 ">
                                     <strong type="text" id="text-input" > Size </strong>
-                                        <select value="{{old('size')}}" name="size" id="select" class="form-control">
-                                            <option value="64">64 GB</option>
-                                            <option value="128">128 GB</option>
-                                            <option value="512">512 GB</option>
-                                            <option value="1000">1 TB</option>
+                                        <select name="size" id="select" class="form-control">
+                                            <option value="64" {{ old('size') == '64' ? 'selected' : '' }}>64 GB</option>
+                                            <option value="128" {{ old('size') == '128' ? 'selected' : '' }}>128 GB</option>
+                                            <option value="512" {{ old('size') == '512' ? 'selected' : '' }}>512 GB</option>
+                                            <option value="1000" {{ old('size') == '1000' ? 'selected' : '' }}>1 TB</option>
                                         </select>
                                 </div>
                                 <div class="col-3 ">
@@ -94,11 +71,11 @@
                                 </div>
                                 <div class="col-3 ">
                                     <strong type="text" id="text-input" > Color </strong>
-                                    <select value="{{ old('color') }}" name="color" id="select" class="form-control">
-                                        <option value="gold">Gold</option>
-                                        <option value="purple">Purple</option>
-                                        <option value="silver">Silver</option>
-                                        <option value="black">Black</option>
+                                    <select name="color" id="select" class="form-control">
+                                        <option value="gold" {{ old('color') == 'gold' ? 'selected' : '' }}>Gold</option>
+                                        <option value="purple" {{ old('color') == 'purple' ? 'selected' : '' }}>Purple</option>
+                                        <option value="silver" {{ old('color') == 'silver' ? 'selected' : '' }}>Silver</option>
+                                        <option value="black" {{ old('color') == 'black' ? 'selected' : '' }}>Black</option>
                                     </select>
                                 </div>
                             </div>  
@@ -140,7 +117,7 @@
                             </div>
 
                             <div class="col col-md-2">
-                                <button type="submit" class="btn btn-success btn-sm">
+                                <button type="submit" class="btn btn-info btn-sm">
                                     Submit
                                 </button>
                                 <a href="{{route('products.index')}}" type="reset" class="btn btn-danger btn-sm"

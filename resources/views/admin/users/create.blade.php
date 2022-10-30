@@ -1,30 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Create User')
+@section('form', 'User')
 @section('content')
-<div class="breadcrumbs">
-    <div class="breadcrumbs-inner">
-        <div class="row m-0">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">@yield('title')</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="content">
     <div class="animated fadeIn">
@@ -125,7 +102,7 @@
                             @endforeach
                         </div>
                         <div class="col col-md-2">
-                            <button type="submit" class="btn btn-success btn-sm">
+                            <button type="submit" class="btn btn-info btn-sm">
                                Submit
                             </button>
                             <a href="{{route('users.index')}}" type="reset" class="btn btn-danger btn-sm" onclick="return confirm('Unsaved data! Back??');">

@@ -1,30 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Create Category')
+@section('form', 'Categories' )
 @section('content')
-<div class="breadcrumbs">
-    <div class="breadcrumbs-inner">
-        <div class="row m-0">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Forms</a></li>
-                            <li class="active">@yield('title')</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="content">
     <div class="animated fadeIn">
@@ -49,6 +26,7 @@
                             <div class="col col-md-2"><label for="select" class=" form-control-label">Parent Category</label></div>
                             <div class="col-12 col-md-9">
                                 <select name="parent_id" id="select" class="form-control">
+                                    <option value="">None</option>
                                     @foreach ($parentCategories as $item )
                                     <option value="{{ $item->id }}" {{ old('parent_id') == $item->id ? 'selected' : '' }}> {{$item->name}} </option>
                                     @endforeach
@@ -59,7 +37,7 @@
                         @enderror
                         </div>
                         <div class="col col-md-2">
-                            <button type="submit" class="btn btn-success btn-sm">
+                            <button type="submit" class="btn btn-info btn-sm">
                                Submit
                             </button>
                             <a href="{{route('categories.index')}}" type="back" class="btn btn-back btn-danger btn-sm" >
