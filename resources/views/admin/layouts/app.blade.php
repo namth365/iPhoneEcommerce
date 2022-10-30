@@ -76,21 +76,22 @@
 
 <body>
     <!-- Left Panel -->
-  @include('admin.layouts.sidebar')
+    @include('admin.layouts.sidebar')
     <!-- /#left-panel -->
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">
         <!-- Header-->
-    @include('admin.layouts.header')
+            @include('admin.layouts.header')
         <!-- /#header -->
         <!-- Content -->
-        <div >
-          @yield('content')  
-        </div>
+                <div >
+                    @include('admin.layouts.dashboard')
+                    @yield('content')  
+                </div>
         <!-- /.content -->
-        <div class="clearfix"></div>
+            <div class="clearfix"></div>
         <!-- Footer -->
-   @include('admin.layouts.footer')
+            @include('admin.layouts.footer')
         <!-- /.site-footer -->
     </div>
     <!-- /#right-panel -->

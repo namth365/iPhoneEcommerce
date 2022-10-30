@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
-@section('title', 'List')
-@section('form', 'User')
+@section('title', 'List Coupons')
+@section('form', 'Coupons')
 @section('content')
 
 <div class="content">
@@ -20,32 +20,28 @@
                             <thead>
                                 <tr>
                                     <th class="">#</th>
-                                    <th>Avatar</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Gender</th>
+                                    <th>Type</th>
+                                    <th>Value</th>
+                                    <th>Expery Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user )
+                                @foreach ($coupons as $coupon )
                                 <tr>
-                                    <td class="serial"> {{$user->id}}</td>
-                                    <td><img src="{{ $user->images ? asset('upload/' . $user->images->url) : 'upload/default.png' }}" width="180px"></td>
-                                    <td>  <span class="name"> {{$user->name}} </span> </td>
-                                    <td> <span class="product">{{$user->email}}</span> </td>
-                                    <td> <span class="product">{{$user->phone}}</span> </td>
-                                    <td> <span class="product">{{$user->address}}</span> </td>
-                                    <td><span class="">{{$user->gender}}</span></td>
+                                    <td class="serial"> {{$coupon->id}}</td>
+                                    <td> <span class="name"> {{$coupon->name}} </span> </td>
+                                    <td> <span class="name"> {{$coupon->type}} </span> </td>
+                                    <td><span class="">{{$coupon->value}}</span></td>
+                                    <td><span class="">{{$coupon->expery_date}}</span></td>
                                     <td>
-                                        <a href="{{route('users.edit', $user->id)}}" class="badge btn btn-info">Edit</a>
-                                        <form action="{{route('users.destroy', $user->id)}}" method="post" id="form-delete{{ $user->id }}">
+                                        <a href="{{route('coupons.edit', $coupon->id)}}" class="badge btn btn-info">Edit</a>
+                                        <form action="{{route('coupons.destroy', $coupon->id)}}" method="post" id="form-delete{{ $coupon->id }}">
                                             @csrf
                                             @method('delete')
                                         </form>
-                                        <button class="badge btn btn-delete btn-danger" data-id={{ $user->id }}  >Delete</button>
+                                        <button class="badge btn btn-delete btn-danger" data-id={{ $coupon->id }}  >Delete</button>
                                     </td>
                                 </tr>
                                 @endforeach
