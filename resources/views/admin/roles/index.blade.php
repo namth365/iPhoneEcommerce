@@ -49,6 +49,6 @@
                 </div>
             </div>
         </div>
-    </div><!-- .animated -->
+    </div>
 </div>
 @endsection
